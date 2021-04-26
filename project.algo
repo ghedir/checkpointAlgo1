@@ -1,0 +1,23 @@
+ALGORITHM algorithm_name
+VAR
+    ph:CHAR:="";
+    voyellesCount:INTEGER:=0;
+    caractereCount:INTEGER:=0;
+    espaceCount:INTEGER:=0;
+
+BEGIN
+WHILE (ph <> ".") DO
+    write("donner une phrase :");
+    read("ph");
+    caractereCount := caractereCount+1;
+    IF (ph=" ") THEN
+        espaceCount := espaceCount+1;
+    END_IF
+    IF (ph="a") or (ph="e") or (ph="i") or (ph="u") or (ph="y")THEN
+    voyellesCount := voyellesCount+1;
+    END_IF
+END_WHILE
+write(caractereCount);
+write(voyellesCount);
+write(espaceCount);
+END
